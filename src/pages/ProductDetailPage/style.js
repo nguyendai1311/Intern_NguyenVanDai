@@ -82,35 +82,56 @@ export const CourseSidebar = styled.div`
   border-radius: 10px;
   padding: 20px;
   height: fit-content;
-
-  @media (max-width: 992px) {
-    width: 100%;
-  }
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 `;
 
+// export const CourseSidebar = styled.div`
+//   background: #fff;
+//   padding: 16px;
+//   border-radius: 12px;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+//   text-align: center;
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// `;
+
+
 export const BuyButton = styled.button`
-  background: #2d66f4;
+  background-color: #1677ff;
   color: white;
   border: none;
-  padding: 12px;
-  border-radius: 6px;
-  width: 100%;
+  padding: 12px 24px;
+  border-radius: 8px;
   font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 20px;
   font-size: 16px;
-  transition: background 0.3s;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+
+  display: block;
+  margin: 0 auto; 
 
   &:hover {
-    background: #1e4bd1;
+    background-color: #0056d2;
   }
 `;
 
 export const CourseImage = styled.img`
   width: 100%;
-  border-radius: 10px;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const PriceBox = styled.div`
