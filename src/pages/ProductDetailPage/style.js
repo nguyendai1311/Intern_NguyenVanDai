@@ -87,18 +87,6 @@ export const CourseSidebar = styled.div`
   text-align: center;
 `;
 
-// export const CourseSidebar = styled.div`
-//   background: #fff;
-//   padding: 16px;
-//   border-radius: 12px;
-//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-//   text-align: center;
-
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// `;
-
 
 export const BuyButton = styled.button`
   background-color: #1677ff;
@@ -122,15 +110,14 @@ export const BuyButton = styled.button`
 
 export const CourseImage = styled.img`
   width: 100%;
-  max-width: 600px;
-  height: auto;
+  height: 300px;             
+  object-fit: cover;          
   border-radius: 12px;
-  object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    max-width: 100%;
+    height: 220px;            
   }
 `;
 

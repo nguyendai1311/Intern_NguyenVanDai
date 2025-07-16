@@ -113,6 +113,13 @@ const HomePage = ({ favorites, setFavorites, viewHistory, setViewHistory }) => {
     }
   };
 
+  const addToHistory = (product) => {
+    setViewHistory((prev) => {
+      const exists = prev.find((item) => item.id === product.id);
+      if (exists) return prev;
+      return [product, ...prev];
+    });
+  };
 
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -165,6 +172,7 @@ const HomePage = ({ favorites, setFavorites, viewHistory, setViewHistory }) => {
                 product={product}
                 onToggleFavorite={toggleFavorite}
                 isFavorite={favorites.includes(product.id)}
+                onAddToHistory={() => addToHistory(product)} 
               />
             ))}
           </ProductGrid>

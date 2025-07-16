@@ -25,7 +25,6 @@ const ProductDetailPage = () => {
   const product = mockProducts.find(p => p.id === parseInt(id));
   const [activeTab, setActiveTab] = useState("intro");
 
-  // Lấy review từ mock data
   const [reviews, setReviews] = useState(product?.reviews || []);
 
   if (!product) return <p>Không tìm thấy sản phẩm</p>;
